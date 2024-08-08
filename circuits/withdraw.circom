@@ -93,6 +93,7 @@ template withdraw(levels) {
     // public
     signal input root;
     signal input nullifierHash;
+    signal input recipient;
     // private
     signal input nullifier;
     signal input secret;
@@ -115,6 +116,10 @@ template withdraw(levels) {
         tree.pathIndices[i] <== pathIndices[i];
     }
 
+    // check recipient
+    signal recipientSquare;
+    recipientSquare <== recipient * recipient;
+
     // public input: root, nullifierHash
     // private: secret, nullifier, pathElements[levels], pathIndices[levels]
 
@@ -122,4 +127,4 @@ template withdraw(levels) {
 	// MerkleTreeChecker   
 }
 
-component main {public [root, nullifierHash]} = withdraw(20);
+component main {public [root, nullifierHash, recipient]} = withdraw(20);
