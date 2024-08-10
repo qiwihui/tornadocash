@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.0;
 
-import {MerkleTree} from "./MerkleTree.sol";
+import {MerkleTree, IHasher} from "./MerkleTree.sol";
 import { ReentrancyGuard } from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 interface IVerifier {
@@ -23,10 +23,11 @@ contract Tornado is MerkleTree, ReentrancyGuard {
     event Withdraw(address _recipient, bytes32 _nullilfierHash);
 
     constructor(
+        IHasher _hasher,
         IVerifier _verifier,
         uint256 _denomination,
         uint32 _merkleTreeHeight
-    ) MerkleTree(_merkleTreeHeight) {
+    ) MerkleTree(_merkleTreeHeight, _hasher) {
         verifier = _verifier;
         denomination = _denomination;
     }
