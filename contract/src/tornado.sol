@@ -33,7 +33,7 @@ contract Tornado is MerkleTree, ReentrancyGuard {
     }
 
     function deposit(bytes32 commitment) external payable nonReentrant {
-        require(commitments[commitment], "The commitment has been added");
+        require(!commitments[commitment], "The commitment has been added");
         require(msg.value == denomination, "Error denomination");
 
         uint32 leafIndex = insert(commitment); // 2^20
@@ -48,7 +48,7 @@ contract Tornado is MerkleTree, ReentrancyGuard {
         address _recipient
     ) external nonReentrant {
         require(
-            nullilfierHashes[_nullilfierHash],
+            !nullilfierHashes[_nullilfierHash],
             "The note has already been spent"
         );
         // check root exists in merkle tree
