@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:hasher": "node contract/script/compileHasher.js"
+    "build:circuits": "cd circuits && bash compile_circuits.sh",
+    "build:hasher": "node contract/script/compileHasher.js",
+    "build:contracts": "cd contract && forge build",
+    "deploy:contracts": "cd contract && forge script script/Tornado.s.sol --rpc-url=http://127.0.0.1:8545 --broadcast"
   },
   "dependencies": {
     "circomlib": "^2.0.5",
