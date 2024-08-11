@@ -15,6 +15,8 @@
     "circomlibjs": "^0.1.7",
     "dotenv": "^16.4.5",
     "ethers": "^5",
-    "ffjavascript": "^0.3.0"
+    "ffjavascript": "^0.3.0",
+    "fixed-merkle-tree": "^0.6.0",
+    "snarkjs": "^0.7.4"
   }
 }
