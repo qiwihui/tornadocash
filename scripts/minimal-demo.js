@@ -9,7 +9,7 @@ const assert = require("assert");
 
 const RPC_URL = process.env.ETH_RPC_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const CONTRACT_ADDRESS = "0xB354ECF032e9e14442bE590D9Eaee37d2924B67A";
+const CONTRACT_ADDRESS = "0xC54051689e0931FdCF3e708b665f521f7ab42Fb0";
 const MERKLE_TREE_HEIGHT = 20;
 const wasmFile = __dirname + "/../circuits/build/withdraw_js/withdraw.wasm";
 const zkeyFile = __dirname + "/../circuits/build/withdraw.zkey";

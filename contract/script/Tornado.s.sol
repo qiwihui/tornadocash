@@ -7,7 +7,7 @@ import {Tornado, IHasher, IVerifier} from "../src/tornado.sol";
 contract TornadoScript is Script {
     function run() public {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        address hasher = 0xE57A305f34fD0B6A55A66e8ec9559e6573100cBe;
+        address hasher = 0x9bDD64340D3CE0607f51bBC7508CA40D45849ab8;
 
         vm.startBroadcast(deployerPrivateKey);
         // deploy contract
