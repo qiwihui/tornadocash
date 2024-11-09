@@ -10,7 +10,7 @@
     "demo": "node scripts/minimal-demo.js",
     "build:circuits": "cd circuits && bash compile_circuits.sh",
     "build:hasher": "node contract/script/compileHasher.js",
-    "build:contracts": "cd contract && forge build && cp out/Tornado.sol/Tornado.json ../src/lib/abi/",
+    "build:contracts": "cd contract && forge build && cp out/tornado.sol/Tornado.json ../src/lib/abi/",
     "deploy:contracts": "cd contract && forge script script/Tornado.s.sol --rpc-url=http://127.0.0.1:8545 --broadcast"
   },
   "dependencies": {

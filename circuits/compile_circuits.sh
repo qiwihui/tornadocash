@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p ptau
-mkdir -p buid
+mkdir -p build
 
 wget -c https://storage.googleapis.com/zkevm/ptau/powersOfTau28_hez_final_16.ptau -O ptau/powersOfTau28_hez_final_16.ptau
 circom withdraw.circom --r1cs --wasm --json -o build/
