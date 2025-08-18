@@ -8,8 +8,8 @@ import { useEthersSigner } from "./ethers";
 import BeatLoader from "react-spinners/BeatLoader";
 import "./TornadoCashUI.css";
 
-const AMOUNT = "1";
-const CONTRACT_ADDRESS = "0xC54051689e0931FdCF3e708b665f521f7ab42Fb0";
+const AMOUNT = "0.1";
+const CONTRACT_ADDRESS = "0x1Dc005f3D6aE614Cec7833c6e066c1cee96EfAB5";
 
 const TornadoCashUI = () => {
   const [withdrawNote, setWithdrawNote] = useState("");

@@ -11,7 +11,7 @@
     "build:circuits": "cd circuits && bash compile_circuits.sh",
     "build:hasher": "node contract/script/compileHasher.js",
     "build:contracts": "cd contract && forge build && cp out/Tornado.sol/Tornado.json ../src/lib/abi/",
-    "deploy:contracts": "cd contract && forge script script/Tornado.s.sol --rpc-url=http://127.0.0.1:8545 --broadcast"
+    "deploy:contracts": "cd contract && forge script script/Tornado.s.sol --rpc-url=$ETH_RPC_URL --broadcast"
   },
   "dependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",

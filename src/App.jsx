@@ -1,5 +1,5 @@
 import { http, createConfig } from "wagmi";
-import { mainnet, foundry } from "wagmi/chains";
+import { mainnet, foundry, sepolia } from "wagmi/chains";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
@@ -12,10 +12,11 @@ const projectId = "4265189f60ad0e1a606df6152e4e2ca0";
 const config = createConfig(
   getDefaultConfig({
     // Your dApps chains
-    chains: [foundry],
+    chains: [sepolia, foundry],
     transports: {
       // RPC URL for each chain
       [foundry.id]: http("http://127.0.0.1:8545"),
+      [sepolia.id]: http("https://ethereum-sepolia.blockpi.network/v1/rpc/public"),
     },
 
     // Required API Keys
